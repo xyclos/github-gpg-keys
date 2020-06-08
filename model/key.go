@@ -45,3 +45,16 @@ func (gpk GithubPGPKeys) JSON() string {
 	}
 	return string(gJSON)
 }
+
+func (gpk GithubPGPKeys) FILTER(email string) GithubPGPKeys {
+	/*var githubResp model.GithubPGPKeys
+	for _, key := range gpk {
+		shouldInclude := false
+		for _, emailItem := range key.Emails {
+			if emailItem.Email == email {
+				return key
+			}
+		}
+	}*/
+	return gpk
+}
